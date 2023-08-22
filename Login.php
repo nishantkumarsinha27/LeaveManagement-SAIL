@@ -26,13 +26,13 @@ session_start();
             <!-- Codrops top bar -->
             <hr>
             <div class="accounttype">
+                <button type="button" onclick="window.location.href='index.html'">HOME</button>
                 <button type="button" onclick="alert('You are already on Employee Login Page.')">EMPLYOEE</button>
                 <button type="button" onclick="window.location.href='adminLogin.html'">ADMIN</button>
             </div>
           <hr>
             <section>				
                 <div id="container_demo" >
-                    <!-- hidden anchor to stop jump http://www.css3create.com/Astuce-Empecher-le-scroll-avec-l-utilisation-de-target#wrap4  -->
                     <a class="hiddenanchor" id="toregister"></a>
                     <a class="hiddenanchor" id="tologin"></a>
                     <div id="wrapper">
