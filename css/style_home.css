@@ -180,7 +180,7 @@ nav{
     column-gap: 10px;  
     background-color: var(--white);
     box-shadow: 0 2px 8px rgb(0 0 0 / 10%);
-    visibility: hidden;
+    visibility: visible;
     opacity: 0;
     transition: all 0.3s;
     z-index: 10;
@@ -268,7 +268,7 @@ header{
     object-fit: cover;
     object-position: center bottom;
     opacity: 0;
-    visibility: hidden;
+    visibility: visible;
     transition: all .3s;
 }
 .header-image img.active {

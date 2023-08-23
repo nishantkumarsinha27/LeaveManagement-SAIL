@@ -3,7 +3,6 @@
     if (!isset($_SESSION['emp_firstName'])) {
         header("Location: index.php");
     }
-    echo "Welcome ".$_SESSION['emp_firstName']." ".$_SESSION['emp_lastName'];
     ?>
 
     <!DOCTYPE html>
@@ -13,13 +12,36 @@
             <title>FORM</title>
             <meta name="keywords" content="HTML,CSS">
             <meta name="viewport" conent="width=device-width, initial-scale=1.0"> 
+            <link href="https://fonts.googleapis.com/css2?family=Muli:wght@400;700&display=swap" rel="stylesheet">
             
             <style>
                 body {
-                    background-color: rgb(184, 230, 199);
-                    padding: 60px;
-                    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+                    margin: 0;
+                    padding: 0;
+                    color: #222222;
+                    background-color: #f2f2f0;
+                    background-color: #56385a;
+                    background-image: url("/images/cover.png");
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-attachment: fixed;
+                    padding: 20px;
+                    overflow-x: hidden;
+                    font-family:"Muli", sans-serif, -apple-system, BlinkMacSystemFont,
+                                "Helvetica Neue", Helvetica, sans-serif;
+                    outline: none;
+
                 }
+                .Welcome{
+                    text-align: center;
+                    color: #ffff;
+                    font-family:    Arial, Helvetica, sans-serif;
+                    font-size:      40px;
+                    font-weight:    bold;
+
+                }
+
 
                 /*div {
                     border-radius: 5px;
@@ -142,6 +164,8 @@
                 input#submit:hover {
                     background-color: #339e38;
                 }
+                
+                
 
                 label,span,h2{
                     text-shadow: inset 1px 1px 5px rgba(0,0,0,0.3);
@@ -149,7 +173,7 @@
                 }
 
                 h1{
-                    color: rgb(2, 2, 13);
+                    color: #ffff;
                     height: 150px;
                     text-align: center;
                     height: 100px;
@@ -157,7 +181,8 @@
                     font-weight: 50px;
                     padding-top: 10px;
                     margin-bottom: 25px;
-                    background-color:rgb(108, 152, 107);
+                    background-color:#56385a;
+
                 } 
                 p{
                     color: red;
@@ -180,15 +205,84 @@
                     display:flex;
                     align-items: center;
                 }
+
                 #info{
                     display: none;
                 }
+                                
+                .topnav {
+                position: relative;
+                overflow: hidden;
+                background-color: #56385a;
+                }
 
+                .topnav a {
+                float: left;
+                color: #f2f2f2;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+                font-size: 17px;
+                }
+
+                .topnav a:hover {
+                background-color: #ddd;
+                color: black;
+                }
+
+                .topnav a.active {
+                background-color:#56385a ;
+                color: white;
+                }
+
+                .topnav-centered a {
+                float: none;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                }
+
+                .topnav-right {
+                float: right;
+                }
+
+                /* Responsive navigation menu (for mobile devices) */
+                @media screen and (max-width: 600px) {
+                .topnav a, .topnav-right {
+                    float: none;
+                    display: block;
+                }
+                
+                .topnav-centered a {
+                    position: relative;
+                    top: 0;
+                    left: 0;
+                    transform: none;
+                }
+                }
             </style>
 
         </head>
         <body >
-            <a href="logout.php"> <input type="submit" name="" value="LogOut"> </a>
+            <!-- Top navigation -->
+            <div class="topnav">
+
+            <div class="topnav-centered">
+            </div>
+            <div class="topnav-right">
+            <a href="#about">LeaveInfo</a>
+            <a href="logout.php">LogOut</a>
+            </div>
+
+</div>
+
+        <div class="Welcome">
+        <?php echo "Welcome, ".$_SESSION['emp_firstName']." ".$_SESSION['emp_lastName'];  ?>
+            </div>
+            
+            
+
             <h1>Employee Leave Application Form</h1>
             <p>Please fill in the form with all the required necessary information.</p>
             <br><hr><br>
