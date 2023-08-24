@@ -33,6 +33,7 @@ if(!isset($_SESSION['adminSession'])){
     <div class="form-body">
         <form  action="Connection_register.php" autocomplete="on" method="post" class="the-form"> 
             <h2 class="title">Add new Employee</h2>
+            <br><br>
                 <label for="empId">Employee Id </label>
                 <input id="empId" name="empId" required="required" type="text" placeholder="eg. 1234" />
                 <label for="firstName">First Name </label>
